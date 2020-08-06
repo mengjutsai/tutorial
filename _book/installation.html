@@ -166,29 +166,25 @@
                                 
                                 <h1 id="installation">Installation</h1>
 <p>We need to install npm and node.js for the installation. Follow from the <a href="https://github.com/chusiang/how-to-build-the-gitbook-with-gitbook-cli" target="_blank">tutorial</a>.</p>
-<pre><code># Mac OSX.
-brew install node npm
-
-# Downgrade node.js to v5.12.0.
-sudo npm install n -g
-n 5.12.0       
-
-# Install gitbook-cli package.
-sudo npm install -g gitbook-cli
-
-# Install gitbook
-gitbook install
+<p>For Mac OSX, we can use the <code>brew</code> to install</p>
+<pre><code>brew install node npm
+</code></pre><p>To have a stable version, we can downgrade node.js to v5.12.0.</p>
+<pre><code>sudo npm install n -g
+n 5.12.0
+</code></pre><p>Then we should install gitbook-cli package.</p>
+<pre><code>sudo npm install -g gitbook-cli
+</code></pre><p>Install gitbook</p>
+<pre><code>gitbook install
 gitbook --version
 </code></pre><h2 id="gitbook-setup">Gitbook setup</h2>
-<pre><code># Initialize the gitbook folder
-gitbook init
+<p>Initialize the gitbook folder</p>
+<pre><code>gitbook init
+</code></pre><p>Create the <code>public</code> folder which will be presented in the format of the gitbook</p>
+<pre><code>gitbook build . public
+</code></pre><p>Show the web in the localhost as a preview</p>
+<pre><code>gitbook serve
+</code></pre><p>Then we need to update the <code>public</code> folder as the public repo to present the tutorial.</p>
 
-# Create the public folder which will be presented in the format of the gitbook
-gitbook build . public
-
-# Show the web in the localhost
-gitbook serve
-</code></pre>
                                 
                                 </section>
                             
@@ -227,7 +223,7 @@ gitbook serve
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installation of Gitbook","level":"1.1.1","depth":2,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"Installation of Gitbook","level":"1.1.1","depth":2,"path":"installation.md","ref":"installation.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"installation.md","mtime":"2020-08-06T16:33:45.060Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-06T16:36:15.258Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Installation of Gitbook","level":"1.1.1","depth":2,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"Installation of Gitbook","level":"1.1.1","depth":2,"path":"installation.md","ref":"installation.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"installation.md","mtime":"2020-08-06T16:45:47.744Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-06T16:36:25.114Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -235,6 +231,10 @@ gitbook serve
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
