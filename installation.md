@@ -11,7 +11,7 @@ To have a stable version, we can downgrade node.js to v5.12.0.
 
 ```
 sudo npm install n -g
-n 5.12.0       
+n 5.12.0
 ```
 
 Then we should install gitbook-cli package.
@@ -30,10 +30,7 @@ gitbook --version
 Initialize the gitbook folder
 ```
 gitbook init
-
 ```
-
-
 
 Create the `public` folder which will be presented in the format of the gitbook
 
@@ -47,3 +44,30 @@ Show the web in the localhost as a preview
 gitbook serve
 ```
 Then we need to update the `public` folder as the public repo to present the tutorial.
+
+## Plugin
+
+The plugin is easy to add, just create a file called `book.json`. Include the plugin into this file:
+
+- `mathjax`: use to include the latex format in the gitbook
+- `intopic-toc`: table of contents on the right shows the contents in the article
+- `search-pro`: better search tool
+- `splitter`: enable the content column to be moved
+
+```
+{
+    "plugins": ["mathjax",
+				"intopic-toc",
+				"search-pro",
+				"-lunr",
+				"-search",
+				"splitter",
+				"klipse"
+				]
+}
+```
+
+## Conversion from jupyter notebook to markdown
+```
+jupyter nbconvert --to md < input notebook >
+```

@@ -1,0 +1,10 @@
+{
+    "plugins": ["mathjax",
+				"intopic-toc",
+				"search-pro",
+				"-lunr",
+				"-search",
+				"splitter",
+				"klipse"
+				]
+}
