@@ -4,7 +4,7 @@ Generate key (if you have it you can skip)
 
 ```
 ssh-keygen -t rsa
-‌```
+```
 
 Copy to you lxplus (or cluster)
 
@@ -13,7 +13,7 @@ ssh-copy-id <username>@<remote machine name>
 ```
 
 
-On the lxplus, create a file `~/.ssh/config` and include the following information.
+On the lxplus, create a file `~/.ssh/config` and include the following information
 
 ```
 Host svn.cern.ch svn
@@ -42,10 +42,15 @@ Host *
   ServerAliveInterval 120
 ```
 
-The final step is to change the authority.
+The final step is to change the authoritys
 
 ```
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/id_rsa
 chmod 644 ~/.ssh/config ~/.ssh/id_rsa.pub
+```
+
+Before login, `kinit` to make the local machine remember the password
+```
+kinit <yourname>@CERN.CH
 ```
