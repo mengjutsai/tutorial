@@ -1,5 +1,5 @@
 jupyter nbconvert --to markdown *.ipynb
+gitbook build . public
 git add .
 git commit -m "Automatically update"
-gitbook build . public
 git push
