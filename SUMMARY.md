@@ -4,6 +4,7 @@
   - [NTHU HEP Group](nthu-group.md)
 
 * [Tutorial](tutorial.md)
+  - [Cluster](cluster.md)
   - [ROOT](ROOT.md)
     - [Plotting 101](Simple_ROOTbook_py.md)
 
