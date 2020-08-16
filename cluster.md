@@ -56,6 +56,7 @@ chmod 644 ~/.ssh/config ~/.ssh/id_rsa.pub
 ```
 
 - Before login, `kinit` to make the local machine remember the password. Once the above configuration is set, the only step to login to lxplus without password is `kinit`. If you reboot your local machine or the password is required again when `ssh`, just `kinit` again before `ssh`.
+
 ```
 kinit <yourname>@CERN.CH
 # example: kinit metsai@CERN.CH
