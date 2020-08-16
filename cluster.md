@@ -1,5 +1,9 @@
 # Introduction
 
+## Lxplus
+
+### Login with ssh key (then no password required)
+
 Generate key (if you have it you can skip)
 
 ```
@@ -51,7 +55,7 @@ chmod 600 ~/.ssh/id_rsa
 chmod 644 ~/.ssh/config ~/.ssh/id_rsa.pub
 ```
 
-Before login, `kinit` to make the local machine remember the password
+Before login, `kinit` to make the local machine remember the password. Once the above configuration is set, if you reboot your local machine, the only step to login to lxplus without password is `kinit`.
 ```
 kinit <yourname>@CERN.CH
 # example: kinit metsai@CERN.CH
