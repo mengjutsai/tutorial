@@ -6,10 +6,11 @@ Generate key (if you have it you can skip)
 ssh-keygen -t rsa
 ```
 
-Copy to you lxplus (or cluster)
+Copy to you lxplus (or cluster), it will create a file `~/.ssh/authorized_keys`
 
 ```
 ssh-copy-id <username>@<remote machine name>
+# example: ssh-copy-id metsai@lxplus.cern.ch
 ```
 
 
@@ -53,4 +54,5 @@ chmod 644 ~/.ssh/config ~/.ssh/id_rsa.pub
 Before login, `kinit` to make the local machine remember the password
 ```
 kinit <yourname>@CERN.CH
+# example: kinit metsai@CERN.CH
 ```
