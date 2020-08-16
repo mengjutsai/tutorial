@@ -13,7 +13,7 @@ ssh-copy-id <username>@<remote machine name>
 ```
 
 
-On the lxplus, create a file `~/.ssh/config` and include the following information
+On the local machine, create a file `~/.ssh/config` and include the following information
 
 ```
 Host svn.cern.ch svn
@@ -42,7 +42,7 @@ Host *
   ServerAliveInterval 120
 ```
 
-The final step is to change the authoritys
+The final step is to change the authority on the local machine
 
 ```
 chmod 700 ~/.ssh
