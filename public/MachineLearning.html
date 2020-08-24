@@ -348,6 +348,21 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="introduction">Introduction</h1>
+<h1 id="xgboost">XGBoost</h1>
+<h3 id="importance">Importance</h3>
+<p>We can get feature importance of each feature. This shows how the importance of variables to the BDT training.</p>
+<pre><code>xgb.plot_importance(booster,grid=False,importance_type=&apos;total_gain&apos;);
+</code></pre><p>where <code>importance_type</code> can be different types (see official <a href="https://xgboost.readthedocs.io/en/latest/python/python_api.html#xgboost.Booster.get_score" target="_blank">doc</a>):</p>
+<ul>
+<li><code>weight</code>: the number of times a feature is used to split the data across all trees. (features&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x6B21;&#x6578;)<ul>
+<li><code>gain</code>: the average gain across all splits the feature is used in. (features&#x5E73;&#x5747;&#x6536;&#x76CA;)</li>
+<li><code>cover</code>: the average coverage across all splits the feature is used in.</li>
+<li><code>total_gain</code>: the total gain across all splits the feature is used in. (features&#x7E3D;&#x5E73;&#x5747;&#x6536;&#x76CA;)</li>
+<li><code>total_cover</code>: the total coverage across all splits the feature is used in.</li>
+</ul>
+</li>
+</ul>
+<p>More <a href="https://www.itread01.com/content/1545435380.html" target="_blank">discussion</a> (in Chinese) on the XGBoost is discussed here.</p>
 <h1 id="installation">Installation</h1>
 <pre><code>conda env create -f environment.yml
 </code></pre><p>Activate the environment</p>
@@ -400,7 +415,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Machine Learning","level":"1.3","depth":1,"next":{"title":"TMVA","level":"1.3.1","depth":2,"path":"tmva.md","ref":"tmva.md","articles":[]},"previous":{"title":"Plotting 101","level":"1.2.2.1","depth":3,"path":"Simple_ROOTbook_py.md","ref":"Simple_ROOTbook_py.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","intopic-toc","search-pro","-lunr","-search","splitter","klipse"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MachineLearning.md","mtime":"2020-08-23T13:43:21.569Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-24T02:34:11.835Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Machine Learning","level":"1.3","depth":1,"next":{"title":"TMVA","level":"1.3.1","depth":2,"path":"tmva.md","ref":"tmva.md","articles":[]},"previous":{"title":"Plotting 101","level":"1.2.2.1","depth":3,"path":"Simple_ROOTbook_py.md","ref":"Simple_ROOTbook_py.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","intopic-toc","search-pro","-lunr","-search","splitter","klipse"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MachineLearning.md","mtime":"2020-08-24T11:45:09.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-24T11:45:39.302Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
