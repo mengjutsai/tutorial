@@ -5,8 +5,8 @@
 
 * [Tutorial](tutorial.md)
   - [Cluster](cluster.md)
-  - [ROOT](ROOT.md)
-    - [Plotting 101](Simple_ROOTbook_py.md)
+  - [ROOT](ROOT/ROOT.md)
+    - [Plotting 101](ROOT/Simple_ROOTbook_py.md)
 
 * [Machine Learning](MachineLearning.md)
   - [TMVA](tmva.md)
