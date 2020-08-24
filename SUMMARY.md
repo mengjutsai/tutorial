@@ -12,5 +12,8 @@
   - [TMVA](tmva.md)
   - [Input](Prepare_csv.md)
 
+* [Simulation](simulation.md)
+  - [Madgraph](madgraph.md)
+
 - Contribution
   - [Installation of Gitbook](installation.md)
