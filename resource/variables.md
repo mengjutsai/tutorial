@@ -9,7 +9,7 @@ The sphericity provides measurement of the geometry of hadronic energy momentum 
 $$
 S^{\alpha\beta} =  \frac{\sum_{i} p_i^\alpha p_i^\beta}{\sum_{i} |\vec{p_i}|^2}
 $$
-where $\alpha, \beta = 1, 2, 3$ corresponds to the $x$, $y$ and $z$ components. By standard diagonalization of $S^{\alpha \beta}$ one may find three eigenvalues $\lambda_1 \geq \lambda_2 \geq \lambda_3$, with $\lambda_1 + \lambda_2 + \lambda_3 = 1$. The sphericity of the event is then defined as
+where $ \alpha, \beta = 1, 2, 3 $ corresponds to the $x$, $y$ and $z$ components. By standard diagonalization of $S^{\alpha \beta}$ one may find three eigenvalues $\lambda_1 \geq \lambda_2 \geq \lambda_3$, with $\lambda_1 + \lambda_2 + \lambda_3 = 1$. The sphericity of the event is then defined as
 $$
 S = \frac{3}{2} \, (\lambda_2 + \lambda_3) ~,
 $$
