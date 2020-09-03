@@ -2,9 +2,7 @@
 Here are variables which might be interesting.
 
 ## Sphericity
-This sphericity in 3D is introduced [here](https://home.fnal.gov/~mrenna/lutp0613man2/node234.html) and sphericity in transverse plane is in [this paper](https://reader.elsevier.com/reader/sd/pii/S0375947414002267?token=06646AB57B2503954DD95502C1ECB78D4E76AE543390C439938F56C08140B4C221239122157077869BB3ED14E06EFE56).
-
-The sphericity provides measurement of the geometry of hadronic energy momentum flow. The sphericity is built from two smallest eigenvalues of normalized momentum tensor
+This sphericity in 3D is introduced [here](https://home.fnal.gov/~mrenna/lutp0613man2/node234.html) and sphericity in transverse plane is in [this paper](https://reader.elsevier.com/reader/sd/pii/S0375947414002267?token=06646AB57B2503954DD95502C1ECB78D4E76AE543390C439938F56C08140B4C221239122157077869BB3ED14E06EFE56).The sphericity provides measurement of the geometry of hadronic energy momentum flow. The sphericity is built from two smallest eigenvalues of normalized momentum tensor
 
 $$
 S^{\alpha\beta} =  \frac{\sum_{i} p_i^\alpha p_i^\beta}{\sum_{i} |\vec{p_i}|^2}
