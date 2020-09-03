@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ROOT · GitBook</title>
+        <title>Variables · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Simple_ROOTbook_py.html" />
     
-    
-    <link rel="prev" href="../cluster.html" />
+    <link rel="prev" href="resource.html" />
     
 
     </head>
@@ -156,9 +154,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="ROOT.html">
+        <li class="chapter " data-level="1.2.2" data-path="../ROOT/ROOT.html">
             
-                <a href="ROOT.html">
+                <a href="../ROOT/ROOT.html">
             
                     
                     ROOT
@@ -170,9 +168,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.2.1" data-path="Simple_ROOTbook_py.html">
+        <li class="chapter " data-level="1.2.2.1" data-path="../ROOT/Simple_ROOTbook_py.html">
             
-                <a href="Simple_ROOTbook_py.html">
+                <a href="../ROOT/Simple_ROOTbook_py.html">
             
                     
                     Plotting 101
@@ -283,9 +281,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../resource/resource.html">
+        <li class="chapter " data-level="1.5" data-path="resource.html">
             
-                <a href="../resource/resource.html">
+                <a href="resource.html">
             
                     
                     Resource
@@ -297,9 +295,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../resource/variables.html">
+        <li class="chapter active" data-level="1.5.1" data-path="variables.html">
             
-                <a href="../resource/variables.html">
+                <a href="variables.html">
             
                     
                     Variables
@@ -377,7 +375,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >ROOT</a>
+        <a href=".." >Variables</a>
     </h1>
 </div>
 
@@ -393,21 +391,24 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="introduction">Introduction</h1>
-<h3 id="plotting">Plotting</h3>
-<ul>
-<li><a href="https://swan.web.cern.ch/content/basic-examples" target="_blank">Basic example of ROOT</a></li>
-</ul>
-<h1 id="useful-features">Useful features</h1>
-<h3 id="load-root-files">Load root files</h3>
-<pre><code>TFile f(&quot;filename.root&quot;)
-</code></pre><h3 id="list-the-objects-in-file">List the objects in file</h3>
-<pre><code>f.ls()
-</code></pre><p>The printout normally looks like the following</p>
-<h2 id="ttree">TTree</h2>
-<h3 id="ttreescan">TTree::Scan</h3>
-<p>We can scan variable to have a quick check on the value in the tree.</p>
-<pre><code>MyTree-&gt;Scan(&quot;var1:var2:var3&quot;,&quot;var1==0&quot;);
-</code></pre> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+<p>Here are variables which might be interesting.</p>
+<h2 id="sphericity">Sphericity</h2>
+<p>This sphericity in 3D is introduced <a href="https://home.fnal.gov/~mrenna/lutp0613man2/node234.html" target="_blank">here</a> and sphericity in transverse plane is in <a href="https://reader.elsevier.com/reader/sd/pii/S0375947414002267?token=06646AB57B2503954DD95502C1ECB78D4E76AE543390C439938F56C08140B4C221239122157077869BB3ED14E06EFE56" target="_blank">this paper</a>.</p>
+<p>The sphericity provides measurement of the geometry of hadronic energy momentum flow. The sphericity is built from two smallest eigenvalues of normalized momentum tensor</p>
+<p><script type="math/tex; mode=display">
+S^{\alpha\beta} =  \frac{\sum_{i} p_i^\alpha p_i^\beta}{\sum_{i} |\vec{p_i}|^2}
+</script>
+where $\alpha, \beta = 1, 2, 3$ corresponds to the $x$, $y$ and $z$ components. By standard diagonalization of $S^{\alpha \beta}$ one may find three eigenvalues $\lambda<em>1 \geq \lambda_2 \geq \lambda_3$, with $\lambda_1 + \lambda_2 + \lambda_3 = 1$. The sphericity of the event is then defined as
+<script type="math/tex; mode=display">
+S = \frac{3}{2} \, (\lambda_2 + \lambda_3) ~,
+</script>
+so that $0 \leq S \leq 1$. Sphericity is essentially a measure of the summed $p</em>{\perp}^2$ with respect to the event axis; a 2-jet event corresponds to $S \approx 0$ where only one axis is avaiable, and due to momentum conservation, the event becomes back-to-back. An isotropic event corresponds to $S \approx 1$.</p>
+<p>The sphericity on the transverse plane is define as
+<script type="math/tex; mode=display">
+S = 2\frac{\lambda_1}{\lambda_1+\lambda_2} = 2\lambda_2
+</script>
+where the momentum tensor is now a $2\times 2$ matrix, therefore, only two eigenvalues $\lambda_1, \lambda_2$. When $S \approx 1$, the event is more isotropic.</p>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
                             
@@ -434,14 +435,10 @@
 
             
                 
-                <a href="../cluster.html" class="navigation navigation-prev " aria-label="Previous page: Cluster">
+                <a href="resource.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Resource">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="Simple_ROOTbook_py.html" class="navigation navigation-next " aria-label="Next page: Plotting 101">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -450,7 +447,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ROOT","level":"1.2.2","depth":2,"next":{"title":"Plotting 101","level":"1.2.2.1","depth":3,"path":"ROOT/Simple_ROOTbook_py.md","ref":"ROOT/Simple_ROOTbook_py.md","articles":[]},"previous":{"title":"Cluster","level":"1.2.1","depth":2,"path":"cluster.md","ref":"cluster.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","intopic-toc","search-pro","-lunr","-search","splitter","klipse"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ROOT/ROOT.md","mtime":"2020-09-01T13:01:40.325Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-03T10:16:02.323Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Variables","level":"1.5.1","depth":2,"next":{"title":"Contribution","level":"1.6","depth":1,"ref":"","articles":[{"title":"Installation of Gitbook","level":"1.6.1","depth":2,"path":"installation.md","ref":"installation.md","articles":[]}]},"previous":{"title":"Resource","level":"1.5","depth":1,"path":"resource/resource.md","ref":"resource/resource.md","articles":[{"title":"Variables","level":"1.5.1","depth":2,"path":"resource/variables.md","ref":"resource/variables.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","intopic-toc","search-pro","-lunr","-search","splitter","klipse"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/variables.md","mtime":"2020-09-03T10:15:36.223Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-03T10:16:02.323Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

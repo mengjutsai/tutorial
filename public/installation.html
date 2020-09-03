@@ -184,6 +184,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.3" data-path="python.html">
+            
+                <a href="python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -266,7 +279,39 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" >
+        <li class="chapter " data-level="1.5" data-path="resource/resource.html">
+            
+                <a href="resource/resource.html">
+            
+                    
+                    Resource
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="resource/variables.html">
+            
+                <a href="resource/variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
             
                 <span>
             
@@ -280,7 +325,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.1" data-path="installation.html">
+        <li class="chapter active" data-level="1.6.1" data-path="installation.html">
             
                 <a href="installation.html">
             
@@ -383,7 +428,16 @@ gitbook --version
 }
 </code></pre><h2 id="conversion-from-jupyter-notebook-to-markdown">Conversion from jupyter notebook to markdown</h2>
 <pre><code>jupyter nbconvert --to md &lt; input notebook &gt;
-</code></pre> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+</code></pre><h1 id="lxplus">Lxplus</h1>
+<p>For the lxplus in CERN, we already had <code>npm</code> and <code>node</code> installed. We only need to initialize the <code>package.json</code> suggested <a href="https://segmentfault.com/q/1010000012930521" target="_blank">here</a></p>
+<pre><code>npm init -f
+</code></pre><p>However, the steps are the same but can only be done with user permission but not superuser permission. Therefore, we need to use the local setup without <code>sudo</code> and <code>-g</code> argument when the installation. After the installation, the packages and the commands are stored in the <code>~/node_modules/&lt;package&gt;/bin/</code>. (see <a href="https://stackoverflow.com/questions/18015462/where-does-npm-store-node-modules" target="_blank">here</a>) For example, the <code>n</code> package is stored in the <code>~/node_modules/n/bin/</code>.</p>
+<p>To export all these commands, we can just export these paths.</p>
+<pre><code>export PATH=$(npm bin):$PATH
+</code></pre><h3 id="issue-resolved">Issue resolved:</h3>
+<pre><code>Error: ENOENT: no such file or directory, stat &apos;/eos/home-m/metsai/www/HBSM_Notes/public/gitbook/gitbook-plugin-fontsettings/fontsettings.js&apos;
+</code></pre><p>This can be solved with <a href="https://github.com/GitbookIO/gitbook-cli/issues/55" target="_blank">this discussion</a>.</p>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
                             
@@ -418,7 +472,7 @@ gitbook --version
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installation of Gitbook","level":"1.5.1","depth":2,"previous":{"title":"Contribution","level":"1.5","depth":1,"ref":"","articles":[{"title":"Installation of Gitbook","level":"1.5.1","depth":2,"path":"installation.md","ref":"installation.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","intopic-toc","search-pro","-lunr","-search","splitter","klipse"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"installation.md","mtime":"2020-08-11T16:17:47.845Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-24T11:50:15.543Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Installation of Gitbook","level":"1.6.1","depth":2,"previous":{"title":"Contribution","level":"1.6","depth":1,"ref":"","articles":[{"title":"Installation of Gitbook","level":"1.6.1","depth":2,"path":"installation.md","ref":"installation.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","intopic-toc","search-pro","-lunr","-search","splitter","klipse"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"klipse":{"myConfigKey":"it's the default value"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"installation.md","mtime":"2020-09-01T13:01:38.717Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-03T10:16:02.323Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
