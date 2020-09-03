@@ -8,6 +8,19 @@
 
 # Useful features
 
+### Load root files
+
+```
+TFile f("filename.root")
+```
+
+### List the objects in file
+```
+f.ls()
+```
+The printout normally looks like the following
+
+
 ## TTree
 
 ### TTree::Scan

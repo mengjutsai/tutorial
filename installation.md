@@ -71,3 +71,27 @@ The plugin is easy to add, just create a file called `book.json`. Include the pl
 ```
 jupyter nbconvert --to md < input notebook >
 ```
+
+
+
+# Lxplus
+
+For the lxplus in CERN, we already had `npm` and `node` installed. We only need to initialize the `package.json` suggested [here](https://segmentfault.com/q/1010000012930521)
+
+```
+npm init -f
+```
+
+However, the steps are the same but can only be done with user permission but not superuser permission. Therefore, we need to use the local setup without `sudo` and `-g` argument when the installation. After the installation, the packages and the commands are stored in the `~/node_modules/<package>/bin/`. (see [here](https://stackoverflow.com/questions/18015462/where-does-npm-store-node-modules)) For example, the `n` package is stored in the `~/node_modules/n/bin/`.
+
+To export all these commands, we can just export these paths.
+```
+export PATH=$(npm bin):$PATH
+```
+
+### Issue resolved:
+
+```
+Error: ENOENT: no such file or directory, stat '/eos/home-m/metsai/www/HBSM_Notes/public/gitbook/gitbook-plugin-fontsettings/fontsettings.js'
+```
+This can be solved with [this discussion](https://github.com/GitbookIO/gitbook-cli/issues/55).

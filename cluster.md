@@ -61,3 +61,24 @@ chmod 644 ~/.ssh/config ~/.ssh/id_rsa.pub
 kinit <yourname>@CERN.CH
 # example: kinit metsai@CERN.CH
 ```
+
+
+## Download
+We can use `scp` or `rsync` to download file or upload file.
+
+For example, download file from the cluster to the local machine (ex. your macbook).
+
+```
+rsync -avzh --progress <yourname>@<IP or cluster address>:/path/on/cluster /path/you/want/to/store/
+```
+- -v：verbose
+- -r：recursive, to synchronize all the files in this directories.
+- -a：Remain all the information
+- -z：compression
+- -h：human reable
+- --progress: this can show the
+
+Then, the example will look like this
+```
+rsync -avzh --progress metsai@umt3int01.physics.lsa.umich.edu:/lustre/umt3/user/metsai/mva/mH1000_even/Optimal_v1.root .
+```
